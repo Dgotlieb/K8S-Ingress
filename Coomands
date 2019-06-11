@@ -12,3 +12,22 @@ kubectl get service helloweb
 
 # Visit app
 minikube service helloweb --url
+
+---------------------------------
+
+# Create the Ingress resource
+kubectl apply -f MyIngress.yaml
+
+# Verify the IP address is set (might take a few seconds…)
+kubectl get ingress
+
+# Add the following to your machine hosts file (as su / Administrator):
+<REPLACE WITH INGRESS IP> hello-world.info
+
+For Windows: C:\Windows\System32\drivers\etc\hosts.ics
+For Mac OS X: sudo nano /etc/hosts
+
+# Go to any browser and navigate to hello-world.info (or just cURL).
+
+
+
