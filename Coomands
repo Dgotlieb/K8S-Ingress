@@ -2,7 +2,7 @@
 minikube addons enable ingress
 
 # Run sample app
-kubectl create -f NginxIngress.yaml
+kubectl create -f HelloWeb.yaml
 
 # Expose the deployment
 kubectl expose deployment helloweb --target-port=8080 --type=NodePort
